@@ -251,7 +251,7 @@ def create_app(auth=None):
         logger.info("MCP server created with Bearer authentication enabled")
     else:
         # Update placeholder app name
-        app.name = "Yargı MCP Server"
+        # app.name = "Yargı MCP Server"  # FastMCP doesn't have setter for name
         logger.info("MCP server created with standard capabilities (FastMCP handles tools.listChanged automatically)")
     
     # Add token counting middleware
