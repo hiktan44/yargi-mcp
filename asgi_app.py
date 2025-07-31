@@ -92,8 +92,9 @@ custom_middleware = [
     ),
 ]
 
-# Create MCP app with Bearer authentication
-mcp_server = create_app(auth=bearer_auth)
+# Create MCP app with Bearer authentication (disabled for development)
+# mcp_server = create_app(auth=bearer_auth)
+mcp_server = create_app(auth=None)  # No auth for development
 
 # Add Starlette middleware to FastAPI (not MCP)
 # MCP already has Bearer auth, no need for additional middleware on MCP level
